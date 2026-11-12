@@ -1,16 +1,27 @@
 package command;
 
+import mvc.DrawingModel;
+import mvc.Line;
+import mvc.Point;
+
 public class AddLineCmd implements Command {
+	private DrawingModel model;
+	private Line line;
+
+	public AddLineCmd(DrawingModel model, Line line) {
+		this.model = model;
+		this.line = line;
+	}
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		model.add(line);
 
 	}
 
 	@Override
 	public void unexecute() {
-		// TODO Auto-generated method stub
+		model.remove(line);
 
 	}
 

@@ -1,6 +1,7 @@
 package command;
 
 public class RemoveLineCmd implements Command {
+	//Ovo je zajednička logika za sve Shape klase - napisana u RemoveShapeCmd
 
 	@Override
 	public void execute() {
